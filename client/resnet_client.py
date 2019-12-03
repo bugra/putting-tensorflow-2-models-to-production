@@ -18,6 +18,10 @@ SERVER_URL = 'http://localhost:8501/v1/models/resnet:predict'
 IMAGE_URL = 'https://tensorflow.org/images/blogs/serving/cat.jpg'
 
 
+TOTAL_NUMBER_OF_REQUESTS_FOR_WARMUP_MODEL = 3
+TOTAL_NUMBER_OF_REQUESTS_TO_MEASURE_AVERAGE_LATENCY = 100
+
+
 async def get_as_base64(url):
   out = None
   response = requests.get(url)
@@ -36,21 +40,20 @@ async def main():
   }
 
   # Send few requests to warm-up the model.
-  for _ in range(3):
+  for _ in range(TOTAL_NUMBER_OF_REQUESTS_FOR_WARMUP_MODEL):
     response = requests.post(SERVER_URL, json=predict_request)
     response.raise_for_status()
 
   # Send few actual requests and report average latency
   total_time = 0
-  num_requests = 100
-  for _ in range(num_requests):
+  for _ in range(TOTAL_NUMBER_OF_REQUESTS_TO_MEASURE_AVERAGE_LATENCY):
     response = requests.post(SERVER_URL, json=predict_request)
     response.raise_for_status()
     total_time += response.elapsed.total_seconds()
     prediction = response.json()['predictions'][0]
 
   logger.info('Prediction class: {}, avg latency: {} ms'.format(
-      prediction['classes'], (total_time*1000)/num_requests))
+      prediction['classes'], (total_time*1000)/TOTAL_NUMBER_OF_REQUESTS_TO_MEASURE_AVERAGE_LATENCY))
 
 
 if __name__ == '__main__':
