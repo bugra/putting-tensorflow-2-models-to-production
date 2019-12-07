@@ -5,28 +5,22 @@ Tutorial Materials for Putting Tensorflow Models To Production
 **Bugra Akyildiz**
 
 ### What I do
-- Tech Lead for Jet Search&Recommendations
-- Worked on Visual Search, Recommendations, Query Suggestions
+- Tech Lead for Walmart Search 
+- Worked on Search, Recommendations, Visual Search, Recommendations, Query Suggestions
 
 ### What I did
-- Lead for recommender system @Hinge
-- Worked for a number of startups that did not quite make it :) 
-
-### Background
-- MS in machine learning&signal processing(CS) [NYU]
-- BS in signal processing(EE) [Bilkent]
-
+- Lead for recommender systems @Hinge
 
 ### Tutorial Material
-- Tutorial: https://github.com/bugra/putting-tensorflow-models-to-production 
-- http://bit.ly/bugra-tf
-- `git clone https://github.com/bugra/putting-tensorflow-models-to-production.git` to your local machine
+- Tutorial: https://github.com/bugra/putting-tensorflow-2-models-to-production 
+- http://bit.ly/bugra-tf2 
+- `git clone https://github.com/bugra/putting-tensorflow-2-models-to-production.git` to your local machine
 
 
 ### How to reach me
 - Twitter @bugraa => You can ask questions if you want after tutorial
-- You can also reach to me: bugra@nyu.edu (I may not be responsive until 14th Jan)
-
+- You can also reach to me: bugra@nyu.edu
+- We are hiring a number of positions! bugra.akyildiz@walmart.com
 
 ### How many
 - people are students
