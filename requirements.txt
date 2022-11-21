@@ -7,7 +7,7 @@ baybars==0.0.26
 jupyter==1.0.0
 jupyter-client==5.3.4
 jupyter-console==6.0.0
-jupyter-core==4.6.1
+jupyter-core==4.11.2
 requests==2.22.0
 requests-toolbelt==0.9.1
 Pillow==9.3.0
